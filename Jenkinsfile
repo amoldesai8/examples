@@ -18,6 +18,13 @@ pipeline {
 			    bat "npm install"				  
 				}
 			}
+		stage('Test') {
+     		       steps {			
+				echo 'Test Stage start :'
+			       bat "npm test"				  
+ 			  }
+		}
+		
 		stage('lnit') {
 			steps {	
 				echo 'init Stage start :'	
